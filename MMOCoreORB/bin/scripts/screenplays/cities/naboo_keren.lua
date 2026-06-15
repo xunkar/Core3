@@ -45,6 +45,7 @@ NabooKerenScreenPlay = CityScreenPlay:new {
 
 	mobiles = {
 		{"gadget_specialist", 60, 1215.5, 13, 2741.1, 11, 0, ""},
+      {"imperial_recruiter", 0, 1426.3, 13, 2803.5, 90, 0, ""},
 
 		--starport interior
 		{"chiss_female",60,55.2,-0.5,31.6,0,2125385, "npc_sitting_table_eating"},
