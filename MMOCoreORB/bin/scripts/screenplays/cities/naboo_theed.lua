@@ -130,7 +130,6 @@ NabooTheedScreenPlay = CityScreenPlay:new {
 		{"trainer_1hsword",0,-5565,6,4304,84,0, ""},
 		{"trainer_2hsword",0,-5382,6,4327,180,0, ""},
 		{"trainer_architect",0,-4931,6,4020,39,0, ""},
-		{"trainer_armorsmith", 0, -12.7, 1.1, -0.7, 178, 1692092, ""},
 		{"trainer_artisan",0,-4946,6,4131,138,0, ""},
 		{"trainer_artisan",0,-5996.85,6,4287.56,69,0, ""},
 		{"trainer_bioengineer",0,-5017,6,4009,0,0, ""},
@@ -156,6 +155,13 @@ NabooTheedScreenPlay = CityScreenPlay:new {
 		{"trainer_scout",0,-5986.5,6,4232.79,104,0, ""},
 		{"trainer_scout",0,-4796,6,4103,240,0, ""},
 		{"trainer_unarmed",0,-5649,6,4206,0,0, ""},
+      
+      --Artisan Guild
+      {"trainer_architect", 0, 10.9, 1.1, -14.1, 0, 1692093, ""},
+      {"trainer_armorsmith", 0, -15.1, 1.1, -0.7, 91, 1692092, ""},
+      {"trainer_droidengineer", 0, -11.3, 1.1, -14.2, 0, 1692095, ""},
+      {"trainer_merchant", 0, 11.7, 1.1, 5.6, 180, 1692091, ""},
+      {"trainer_weaponsmith", 0, -2.9, 1.1, -8.6, 89, 1692094, ""},
 
 		--Hotel
 		{"businessman",60,15.5641,1.28309,-2.37071,135.005,1677395, "worried"},
