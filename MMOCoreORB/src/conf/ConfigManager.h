@@ -836,6 +836,19 @@ namespace conf {
 
 			return cachedValue;
 		}
+      
+      inline bool disableHelperDroid() {
+			static uint32 cachedVersion = 0;
+			static bool cachedValue;
+
+			if (configVersion.get() > cachedVersion) {
+				Locker guard(&mutex);
+				cachedValue = getBool("Core3.DisableHelperDroid", false);
+				cachedVersion = configVersion.get();
+			}
+
+			return cachedValue;
+		}
 
 
 		/*
