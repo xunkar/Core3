@@ -179,6 +179,16 @@ function HologrindJediManager:onPlayerLoggedIn(pCreatureObject)
 	if (pCreatureObject == nil) then
 		return
 	end
+	
+	local pGhost = CreatureObject(pCreatureObject):getPlayerObject()
+	if (pGhost == nil) then
+		return
+	end
+	
+	local professions = PlayerObject(pGhost):getHologrindProfessions()
+	if (professions == nil) or (#professions == 0) then
+      self:onPlayerCreated(pCreatureObject)
+	end
 
 	self:checkIfProgressedToJedi(pCreatureObject)
 	self:registerObservers(pCreatureObject)
