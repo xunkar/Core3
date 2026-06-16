@@ -1259,13 +1259,15 @@ void CraftingSessionImplementation::customization(const String& name, byte templ
 	}
 
 	String clientName = name;
-
-	while (clientName.contains("\\#")) {
-		int index = clientName.indexOf("\\#");
-		String sub = "\\" + clientName.subString(index, index + 2);
-
-		clientName = clientName.replaceFirst(sub, "");
-	}
+   bool disableColoringItemNames = ConfigManager::instance()->disableColoringItemNames();
+   
+   if (disableColoringItemNames) {
+      while (clientName.contains("\\#")) {
+         int index = clientName.indexOf("\\#");
+         String sub = "\\" + clientName.subString(index, index + 2);
+         clientName = clientName.replaceFirst(sub, "");
+      }
+   }
 
 	if (clientName.isEmpty()) {
 		clientName = prototype->getDisplayedName();

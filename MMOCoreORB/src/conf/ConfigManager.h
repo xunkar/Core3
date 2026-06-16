@@ -823,6 +823,19 @@ namespace conf {
 
 			return cachedValue;
 		}
+      
+      inline bool disableColoringItemNames() {
+			static uint32 cachedVersion = 0;
+			static bool cachedValue;
+
+			if (configVersion.get() > cachedVersion) {
+				Locker guard(&mutex);
+				cachedValue = getBool("Core3.DisableColoringItemNames", false);
+				cachedVersion = configVersion.get();
+			}
+
+			return cachedValue;
+		}
 
 
 		/*

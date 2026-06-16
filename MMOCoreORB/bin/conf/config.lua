@@ -248,6 +248,10 @@ Core3 = {
 	------TOS Config------
 	TermsOfServiceVersion = 0,
 	TermsOfService = "",
+   
+   ------Game Config------
+   DisableColoringItemNames = "false",       -- Disable the use of color codes in crafted items
+   SpawnHelperDroid = "false",               -- Spawn a profession guide droid for new players
 }
 
 -- NOTE: conf/config-local.lua is parsed after this file if it exists

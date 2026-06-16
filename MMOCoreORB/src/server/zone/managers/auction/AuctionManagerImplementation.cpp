@@ -2309,6 +2309,7 @@ void AuctionManagerImplementation::deleteExpiredSale(AuctionItem* item, bool sen
 		waypoint->setCustomObjectName(vendor->getDisplayedName(), false);
 
 		lockerWaypoint.release();
+      
 
 		String itemName = removeColorCodes(item->getItemName());
 
@@ -2401,12 +2402,15 @@ void AuctionManagerImplementation::sendVendorUpdateMail(SceneObject* vendor, boo
 
 String AuctionManagerImplementation::removeColorCodes(const String& name) {
 	String itemName = name;
-
-	while (itemName.contains("\\#")) {
-		int index = itemName.indexOf("\\#");
-		String sub = "\\" + itemName.subString(index, index + 2);
-		itemName = itemName.replaceFirst(sub,"");
-	}
+   bool disableColoringItemNames = ConfigManager::instance()->disableColoringItemNames();
+   
+   if (disableColoringItemNames) {
+      while (itemName.contains("\\#")) {
+         int index = itemName.indexOf("\\#");
+         String sub = "\\" + itemName.subString(index, index + 2);
+         itemName = itemName.replaceFirst(sub,"");
+      }
+   }
 
 	return itemName;
 }
