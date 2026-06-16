@@ -116,7 +116,6 @@ NabooKerenScreenPlay = CityScreenPlay:new {
 		{"trainer_medic",0,1982,12,2598,0,0, ""},
 		{"trainer_medic",0,1541,25,2789,0,0, ""},
 		{"trainer_medic",0,1784,12,2714,0,0, ""},
-		{"trainer_merchant",0,1524,25,2782,37,0, ""},
 		{"trainer_merchant",0,2005,12,2483,243,0, ""},
 		{"trainer_pistol",0,1253,13,2686,180,0, ""},
 		{"trainer_rifleman",0,1276,13,2685,73,0, ""},
